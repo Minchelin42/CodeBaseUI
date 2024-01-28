@@ -82,7 +82,7 @@ class ShoppingSearchViewController: UIViewController {
         
         clearButton.setTitle("모두 지우기", for: .normal)
         clearButton.titleLabel?.font = .boldSystemFont(ofSize: 15)
-        clearButton.setTitleColor(.green, for: .normal)
+        clearButton.setTitleColor(UIColor(named: "shoppingGreen"), for: .normal)
         
         tableView.backgroundColor = .black
         
