@@ -24,22 +24,24 @@ class ShoppingSearchViewController: UIViewController {
 
         view.backgroundColor = .black
         
+        configureHierarchy()
+        setupConstraints()
+        configureView()
+    }
+    
+    func configureHierarchy() {
         view.addSubview(searchBar)
         view.addSubview(topView)
         topView.addSubview(searchLabel)
         topView.addSubview(clearButton)
         view.addSubview(tableView)
-        
-        searchBar.barTintColor = .black
-        searchBar.searchTextField.backgroundColor = .darkGray
-        searchBar.placeholder = "브랜드, 상품, 프로필, 태그 등"
-        
+    }
+    
+    func setupConstraints() {
         searchBar.snp.makeConstraints { make in
             make.width.equalToSuperview()
             make.top.equalTo(view.safeAreaLayoutGuide)
         }
-        
-        topView.backgroundColor = .black
         
         topView.snp.makeConstraints { make in
             make.width.equalToSuperview()
@@ -47,40 +49,47 @@ class ShoppingSearchViewController: UIViewController {
             
             make.top.equalTo(searchBar.snp.bottom)
         }
-        
-        searchLabel.text = "최근 검색"
-        searchLabel.font = .boldSystemFont(ofSize: 15)
-        searchLabel.textColor = .white
-        
+
         searchLabel.snp.makeConstraints { make in
             make.width.equalTo(100)
             make.centerY.equalToSuperview()
             make.leading.equalTo(10)
         }
-        
-        clearButton.setTitle("모두 지우기", for: .normal)
-        clearButton.titleLabel?.font = .boldSystemFont(ofSize: 15)
-        clearButton.setTitleColor(.green, for: .normal)
-        
+
         clearButton.snp.makeConstraints { make in
             make.width.equalTo(100)
             make.centerY.equalToSuperview()
             
             make.trailing.equalTo(10)
         }
-        
-        tableView.backgroundColor = .black
-        
+
         tableView.snp.makeConstraints { make in
             make.top.equalTo(topView.snp.bottom)
             make.horizontalEdges.bottom.equalToSuperview()
         }
+    }
+    
+    func configureView() {
+        searchBar.barTintColor = .black
+        searchBar.searchTextField.backgroundColor = .darkGray
+        searchBar.placeholder = "브랜드, 상품, 프로필, 태그 등"
+        
+        topView.backgroundColor = .black
+        
+        searchLabel.text = "최근 검색"
+        searchLabel.font = .boldSystemFont(ofSize: 15)
+        searchLabel.textColor = .white
+        
+        clearButton.setTitle("모두 지우기", for: .normal)
+        clearButton.titleLabel?.font = .boldSystemFont(ofSize: 15)
+        clearButton.setTitleColor(.green, for: .normal)
+        
+        tableView.backgroundColor = .black
         
         tableView.delegate = self
         tableView.dataSource = self
         
         tableView.register(SearchListTableViewCell.self, forCellReuseIdentifier: "SearchListTableViewCell")
-
     }
 
 }

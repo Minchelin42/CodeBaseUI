@@ -28,6 +28,13 @@ class SearchViewController: UIViewController {
 
         view.backgroundColor = .black
         
+        configureHierarchy()
+        setupConstraints()
+        configureView()
+
+    }
+    
+    func configureHierarchy() {
         view.addSubview(searchBar)
         view.addSubview(buttonView)
         view.addSubview(resultView)
@@ -36,19 +43,14 @@ class SearchViewController: UIViewController {
         buttonView.addSubview(thirdButton)
         resultView.addSubview(titleLabel)
         resultView.addSubview(subLabel)
-
-        
-        searchBar.barTintColor = .black
-        searchBar.searchTextField.backgroundColor = .darkGray
-        searchBar.placeholder = "게임, 시리즈, 영화를 검색하세요"
-        
+    }
+    
+    func setupConstraints() {
         searchBar.snp.makeConstraints { make in
             make.width.equalToSuperview()
             make.top.equalTo(view.safeAreaLayoutGuide)
             
         }
-        
-        buttonView.backgroundColor = .black
         
         buttonView.snp.makeConstraints { make in
             make.width.equalToSuperview()
@@ -57,6 +59,57 @@ class SearchViewController: UIViewController {
             make.top.equalTo(searchBar.snp.bottom)
             make.horizontalEdges.equalToSuperview()
         }
+        
+        firstButton.snp.makeConstraints { make in
+            make.width.equalTo(105)
+            make.height.equalTo(40)
+            
+            make.leading.equalToSuperview()
+            make.centerY.equalToSuperview()
+        }
+            
+        secondButton.snp.makeConstraints { make in
+            make.width.equalTo(155)
+            make.height.equalTo(40)
+            
+            make.leading.equalTo(firstButton.snp.trailing)
+            make.centerY.equalToSuperview()
+        }
+        
+        thirdButton.snp.makeConstraints { make in
+            make.height.equalTo(40)
+            
+            make.leading.equalTo(secondButton.snp.trailing)
+            make.trailing.equalToSuperview()
+            make.centerY.equalToSuperview()
+        }
+        
+        resultView.snp.makeConstraints { make in
+            make.width.equalToSuperview()
+            
+            make.top.equalTo(buttonView.snp.bottom)
+            make.bottom.equalTo(view.safeAreaLayoutGuide)
+        }
+    
+        titleLabel.snp.makeConstraints { make in
+            make.width.equalToSuperview()
+            
+            make.top.equalTo(240)
+        }
+    
+        subLabel.snp.makeConstraints { make in
+            make.width.equalToSuperview()
+            
+            make.top.equalTo(titleLabel.snp.bottom).offset(10)
+        }
+    }
+    
+    func configureView() {
+        searchBar.barTintColor = .black
+        searchBar.searchTextField.backgroundColor = .darkGray
+        searchBar.placeholder = "게임, 시리즈, 영화를 검색하세요"
+        
+        buttonView.backgroundColor = .black
         
         var config = UIButton.Configuration.filled()
         var titleAttr = AttributedString.init("공개 예정")
@@ -73,14 +126,6 @@ class SearchViewController: UIViewController {
         config.baseForegroundColor = .black
         
         firstButton.configuration = config
-        
-        firstButton.snp.makeConstraints { make in
-            make.width.equalTo(105)
-            make.height.equalTo(40)
-            
-            make.leading.equalToSuperview()
-            make.centerY.equalToSuperview()
-        }
         
         var config2 = UIButton.Configuration.filled()
         
@@ -100,14 +145,6 @@ class SearchViewController: UIViewController {
         
         secondButton.configuration = config2
         
-        secondButton.snp.makeConstraints { make in
-            make.width.equalTo(155)
-            make.height.equalTo(40)
-            
-            make.leading.equalTo(firstButton.snp.trailing)
-            make.centerY.equalToSuperview()
-        }
-        
         var config3 = UIButton.Configuration.filled()
         
         var titleAttr3 = AttributedString.init("TOP 10시리즈")
@@ -126,45 +163,17 @@ class SearchViewController: UIViewController {
         
         thirdButton.configuration = config3
         
-        thirdButton.snp.makeConstraints { make in
-            make.height.equalTo(40)
-            
-            make.leading.equalTo(secondButton.snp.trailing)
-            make.trailing.equalToSuperview()
-            make.centerY.equalToSuperview()
-        }
-        
         resultView.backgroundColor = .black
-        
-        resultView.snp.makeConstraints { make in
-            make.width.equalToSuperview()
-            
-            make.top.equalTo(buttonView.snp.bottom)
-            make.bottom.equalTo(view.safeAreaLayoutGuide)
-        }
         
         titleLabel.text = "이런! 찾으시는 작품이 없습니다."
         titleLabel.textAlignment = .center
         titleLabel.textColor = .white
         titleLabel.font = .boldSystemFont(ofSize: 20)
         
-        titleLabel.snp.makeConstraints { make in
-            make.width.equalToSuperview()
-            
-            make.top.equalTo(240)
-        }
-        
         subLabel.text = "다른 영화, 시리즈, 배우, 감독 또는 장르를 검색해보세요"
         subLabel.textAlignment = .center
         subLabel.textColor = .lightGray
         subLabel.font = .boldSystemFont(ofSize: 15)
-        
-        subLabel.snp.makeConstraints { make in
-            make.width.equalToSuperview()
-            
-            make.top.equalTo(titleLabel.snp.bottom).offset(10)
-        }
- 
     }
 
 }

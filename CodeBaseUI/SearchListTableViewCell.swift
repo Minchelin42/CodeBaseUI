@@ -10,7 +10,6 @@ import SnapKit
 
 class SearchListTableViewCell: UITableViewCell {
     
-
     let circleView = UIView()
     let image = UIImageView()
     let productLabel = UILabel()
@@ -19,33 +18,26 @@ class SearchListTableViewCell: UITableViewCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
+        self.backgroundColor = .black
+        
+        configureHierarchy()
+        setupConstraints()
+        configureCell()
+
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    func configureHierarchy() {
         contentView.addSubview(circleView)
         circleView.addSubview(image)
         contentView.addSubview(productLabel)
         contentView.addSubview(deleteButton)
-        
-        self.backgroundColor = .black
-        
-        circleView.backgroundColor = .clear
-        DispatchQueue.main.async {
-            self.circleView.clipsToBounds = true
-            self.circleView.layer.cornerRadius = self.circleView.frame.width / 2
-        }
-        circleView.layer.borderWidth = 1
-        circleView.layer.borderColor = UIColor.gray.cgColor
-        
-        image.image = UIImage(systemName: "magnifyingglass")
-        image.tintColor = .white
-        image.backgroundColor = .clear
-        
-        productLabel.font = .systemFont(ofSize: 14, weight: .medium)
-        productLabel.textColor = .white
-        productLabel.backgroundColor = .clear
-        
-        deleteButton.setImage(UIImage(systemName: "xmark"), for: .normal)
-        deleteButton.tintColor = .gray
-        deleteButton.backgroundColor = .clear
-        
+    }
+    
+    func setupConstraints() {
         circleView.snp.makeConstraints { make in
             make.size.equalTo(35)
             
@@ -72,8 +64,27 @@ class SearchListTableViewCell: UITableViewCell {
         }
     }
     
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+    func configureCell() {
+        circleView.backgroundColor = .clear
+        DispatchQueue.main.async {
+            self.circleView.clipsToBounds = true
+            self.circleView.layer.cornerRadius = self.circleView.frame.width / 2
+        }
+        circleView.layer.borderWidth = 1
+        circleView.layer.borderColor = UIColor.gray.cgColor
+        
+        image.image = UIImage(systemName: "magnifyingglass")
+        image.tintColor = .white
+        image.backgroundColor = .clear
+        
+        productLabel.font = .systemFont(ofSize: 14, weight: .medium)
+        productLabel.textColor = .white
+        productLabel.backgroundColor = .clear
+        
+        deleteButton.setImage(UIImage(systemName: "xmark"), for: .normal)
+        deleteButton.tintColor = .gray
+        deleteButton.backgroundColor = .clear
+        
     }
 
 }
