@@ -30,7 +30,8 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         
         view.backgroundColor = .black
-        
+ 
+
         view.addSubview(mainImage)
         
         mainImage.image = UIImage(named: "노량")
@@ -39,7 +40,7 @@ class HomeViewController: UIViewController {
         
         mainImage.snp.makeConstraints { make in
             make.width.equalTo(UIScreen.main.bounds.size.width - 30)
-            make.height.equalTo((UIScreen.main.bounds.size.width - 30) * 1.35)
+            make.height.equalTo((UIScreen.main.bounds.size.width - 30) * 1.2)
             make.centerX.equalTo(view)
             make.top.equalTo(view.safeAreaLayoutGuide)
         }
@@ -50,7 +51,7 @@ class HomeViewController: UIViewController {
         tagLabel.font = .systemFont(ofSize: 12, weight: .semibold)
         
         tagLabel.snp.makeConstraints { make in
-            make.top.equalTo(400)
+            make.top.equalTo(350)
             make.centerX.equalTo(mainImage)
         }
         
@@ -68,7 +69,7 @@ class HomeViewController: UIViewController {
             make.width.equalTo((UIScreen.main.bounds.size.width - 75) / 2)
             make.height.equalTo(40)
             
-            make.top.equalTo(425)
+            make.top.equalTo(tagLabel.snp.bottom).offset(10)
             make.leading.equalTo(15)
         }
         
@@ -86,7 +87,7 @@ class HomeViewController: UIViewController {
             make.width.equalTo((UIScreen.main.bounds.size.width - 75) / 2)
             make.height.equalTo(40)
             
-            make.top.equalTo(425)
+            make.top.equalTo(tagLabel.snp.bottom).offset(10)
             make.trailing.equalTo(-15)
         }
         
@@ -96,7 +97,7 @@ class HomeViewController: UIViewController {
         subMenuLabel.font = .systemFont(ofSize: 16, weight: .semibold)
         
         subMenuLabel.snp.makeConstraints { make in
-            make.top.equalTo(565)
+            make.top.equalTo(mainImage.snp.bottom)
             make.leading.equalTo(15)
         }
         
@@ -114,7 +115,8 @@ class HomeViewController: UIViewController {
             make.height.equalTo(200)
             
             make.leading.equalTo(10)
-            make.top.equalTo(600)
+            make.top.equalTo(subMenuLabel.snp.bottom).offset(15)
+            make.bottom.equalTo(view.safeAreaLayoutGuide)
         }
         
         secondImage.image = UIImage(named: "스즈메의문단속")
@@ -123,10 +125,10 @@ class HomeViewController: UIViewController {
         
         secondImage.snp.makeConstraints { make in
             make.width.equalTo((UIScreen.main.bounds.size.width - 40) / 3)
-            make.height.equalTo(200)
             
             make.centerX.equalTo(view)
-            make.top.equalTo(600)
+            make.top.equalTo(firstImage)
+            make.bottom.equalTo(view.safeAreaLayoutGuide)
         }
         
         thirdImage.image = UIImage(named: "더퍼스트슬램덩크")
@@ -135,10 +137,10 @@ class HomeViewController: UIViewController {
         
         thirdImage.snp.makeConstraints { make in
             make.width.equalTo((UIScreen.main.bounds.size.width - 40) / 3)
-            make.height.equalTo(200)
             
             make.trailing.equalTo(-10)
-            make.top.equalTo(600)
+            make.top.equalTo(firstImage)
+            make.bottom.equalTo(view.safeAreaLayoutGuide)
         }
         
         secondImage.addSubview(newEpLabel)

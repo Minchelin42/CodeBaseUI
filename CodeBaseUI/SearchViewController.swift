@@ -161,7 +161,7 @@ class SearchViewController: UIViewController {
         subLabel.snp.makeConstraints { make in
             make.width.equalToSuperview()
             
-            make.top.equalTo(titleLabel.snp.bottom)
+            make.top.equalTo(titleLabel.snp.bottom).offset(10)
         }
  
     }

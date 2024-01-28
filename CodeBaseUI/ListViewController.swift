@@ -50,7 +50,7 @@ class ListViewController: UIViewController {
         
         subtitleLabel.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
-            make.top.equalTo(titleLabel.snp.bottom)
+            make.top.equalTo(titleLabel.snp.bottom).offset(10)
         }
         
         image.image = UIImage(named: "dummy")
@@ -59,7 +59,7 @@ class ListViewController: UIViewController {
             make.width.equalTo(420)
             make.height.equalTo(280)
             make.centerX.equalToSuperview()
-            make.top.equalTo(subtitleLabel.snp.bottom)
+            make.top.equalTo(subtitleLabel.snp.bottom).offset(20)
         }
         
         settingButton.setTitle("설정하기", for: .normal)
@@ -73,7 +73,7 @@ class ListViewController: UIViewController {
             make.height.equalTo(35)
             
             make.centerX.equalToSuperview()
-            make.top.equalTo(600)
+            make.top.equalTo(image.snp.bottom).offset(70)
         }
         
         searchButton.setTitle("저장 가능한 콘텐츠 살펴보기", for: .normal)
@@ -87,7 +87,7 @@ class ListViewController: UIViewController {
             make.height.equalTo(35)
             
             make.centerX.equalToSuperview()
-            make.top.equalTo(650)
+            make.top.equalTo(settingButton.snp.bottom).offset(10)
         }
         
         
