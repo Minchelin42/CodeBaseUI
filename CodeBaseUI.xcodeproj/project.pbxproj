@@ -19,6 +19,8 @@
 		39D47BBD2B659D5C0067840B /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D47BBC2B659D5C0067840B /* SearchViewController.swift */; };
 		39D47BBF2B65ADE00067840B /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D47BBE2B65ADE00067840B /* ListViewController.swift */; };
 		39D47BC12B665C010067840B /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D47BC02B665C010067840B /* TabBarViewController.swift */; };
+		39D47BC32B6668110067840B /* ShoppingSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D47BC22B6668110067840B /* ShoppingSearchViewController.swift */; };
+		39D47BC52B666C160067840B /* SearchListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D47BC42B666C160067840B /* SearchListTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		39D47BBC2B659D5C0067840B /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		39D47BBE2B65ADE00067840B /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		39D47BC02B665C010067840B /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		39D47BC22B6668110067840B /* ShoppingSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingSearchViewController.swift; sourceTree = "<group>"; };
+		39D47BC42B666C160067840B /* SearchListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchListTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +83,8 @@
 				39D47BBC2B659D5C0067840B /* SearchViewController.swift */,
 				39D47BBE2B65ADE00067840B /* ListViewController.swift */,
 				39D47BC02B665C010067840B /* TabBarViewController.swift */,
+				39D47BC22B6668110067840B /* ShoppingSearchViewController.swift */,
+				39D47BC42B666C160067840B /* SearchListTableViewCell.swift */,
 			);
 			path = CodeBaseUI;
 			sourceTree = "<group>";
@@ -163,9 +169,11 @@
 			files = (
 				39D47BBD2B659D5C0067840B /* SearchViewController.swift in Sources */,
 				39D47BA62B6586040067840B /* ViewController.swift in Sources */,
+				39D47BC32B6668110067840B /* ShoppingSearchViewController.swift in Sources */,
 				39D47BBF2B65ADE00067840B /* ListViewController.swift in Sources */,
 				39D47BA22B6586040067840B /* AppDelegate.swift in Sources */,
 				39D47BC12B665C010067840B /* TabBarViewController.swift in Sources */,
+				39D47BC52B666C160067840B /* SearchListTableViewCell.swift in Sources */,
 				39D47BA42B6586040067840B /* SceneDelegate.swift in Sources */,
 				39D47BB62B65864B0067840B /* HomeViewController.swift in Sources */,
 			);
