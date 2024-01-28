@@ -145,62 +145,41 @@ class HomeViewController: UIViewController {
         tagLabel.text = "응원하고픈  ∙  흥미진진  ∙  사극  ∙  전투  ∙  한국 작품"
         tagLabel.textColor = .white
         tagLabel.font = .systemFont(ofSize: 12, weight: .semibold)
+
+        playButton.mainImageButtonStyle(
+            backgroundColor: .white,
+            fontColor: .black,
+            title: "  재생",
+            systemName: "play.fill")
         
-        playButton.backgroundColor = .white
-        playButton.layer.cornerRadius = 5
-        playButton.setTitle("  재생", for: .normal)
-        playButton.titleLabel?.font = .boldSystemFont(ofSize: 15)
-        playButton.setTitleColor(.black, for: .normal)
-        playButton.setImage(UIImage(systemName: "play.fill"), for: .normal)
-        playButton.tintColor = .black
-        
-        plusButton.backgroundColor = .gray
-        plusButton.layer.cornerRadius = 5
-        plusButton.setTitle("  내가 찜한 리스트", for: .normal)
-        plusButton.titleLabel?.font = .boldSystemFont(ofSize: 15)
-        plusButton.setTitleColor(.white, for: .normal)
-        plusButton.setImage(UIImage(systemName: "plus"), for: .normal)
-        plusButton.tintColor = .white
+        plusButton.mainImageButtonStyle(
+            backgroundColor: .gray,
+            fontColor: .white,
+            title: "  내가 찜한 리스트",
+            systemName: "plus")
         
         subMenuLabel.text = "지금 뜨는 콘텐츠"
         subMenuLabel.textColor = .white
         subMenuLabel.font = .systemFont(ofSize: 16, weight: .semibold)
         
-        firstImage.image = UIImage(named: "서울의봄")
-        firstImage.clipsToBounds = true
-        firstImage.layer.cornerRadius = 5
+        firstImage.subImageStyle(image: "서울의봄")
+        secondImage.subImageStyle(image: "스즈메의문단속")
+        thirdImage.subImageStyle(image: "더퍼스트슬램덩크")
         
-        secondImage.image = UIImage(named: "스즈메의문단속")
-        secondImage.clipsToBounds = true
-        secondImage.layer.cornerRadius = 5
+        newEpLabel.contentsLabelStyle(
+            backgroundColor: .red,
+            fontColor: .white,
+            title: "새로운 에피소드")
+
+        nowPlayLabel.contentsLabelStyle(
+            backgroundColor: .white,
+            fontColor: .black,
+            title: "지금 시청하기")
         
-        thirdImage.image = UIImage(named: "더퍼스트슬램덩크")
-        thirdImage.clipsToBounds = true
-        thirdImage.layer.cornerRadius = 5
-        
-        newEpLabel.backgroundColor = .red
-        newEpLabel.clipsToBounds = true
-        newEpLabel.layer.cornerRadius = 2
-        newEpLabel.text = "새로운 에피소드"
-        newEpLabel.textAlignment = .center
-        newEpLabel.textColor = .white
-        newEpLabel.font = .systemFont(ofSize: 12, weight: .bold)
-        
-        nowPlayLabel.backgroundColor = .white
-        nowPlayLabel.clipsToBounds = true
-        nowPlayLabel.layer.cornerRadius = 2
-        nowPlayLabel.text = "지금 시청하기"
-        nowPlayLabel.textAlignment = .center
-        nowPlayLabel.textColor = .black
-        nowPlayLabel.font = .systemFont(ofSize: 12, weight: .bold)
-        
-        newSeriesLabel.backgroundColor = .red
-        newSeriesLabel.clipsToBounds = true
-        newSeriesLabel.layer.cornerRadius = 2
-        newSeriesLabel.text = "새로운 시리즈"
-        newSeriesLabel.textAlignment = .center
-        newSeriesLabel.textColor = .white
-        newSeriesLabel.font = .systemFont(ofSize: 12, weight: .bold)
+        newSeriesLabel.contentsLabelStyle(
+            backgroundColor: .red,
+            fontColor: .white,
+            title: "새로운 시리즈")
 
     }
 

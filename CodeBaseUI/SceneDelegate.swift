@@ -23,8 +23,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
          
          let navigationController = UINavigationController(rootViewController: mainViewController)
         
-        navigationController.navigationBar.topItem?.title = "새싹쇼핑"
-        navigationController.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
+        navigationController.setNavigationTitle(title: "배고프다님의 새싹쇼핑")
 
         window?.rootViewController = navigationController
         window?.makeKeyAndVisible()

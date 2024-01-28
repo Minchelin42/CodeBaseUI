@@ -34,18 +34,12 @@ class TabBarViewController: UITabBarController {
         let navigationSearch = UINavigationController(rootViewController: searchVC)
         let navigationList = UINavigationController(rootViewController: listVC)
 
-        navigationHome.navigationBar.topItem?.title = "고래밥님"
-        navigationHome.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
-        
-        navigationSearch.navigationBar.topItem?.title = "NEW & HOT 검색"
-        navigationSearch.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
-        
-        navigationList.navigationBar.topItem?.title = "저장한 콘텐츠 목록"
-        navigationList.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
+        navigationHome.setNavigationTitle(title: "고래밥님")
+        navigationSearch.setNavigationTitle(title: "NEW & HOT 검색")
+        navigationList.setNavigationTitle(title: "저장한 콘텐츠 목록")
         
         setViewControllers([navigationHome, navigationSearch, navigationList], animated: true)
     }
-
 
 }
 

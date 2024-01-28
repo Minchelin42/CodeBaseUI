@@ -90,17 +90,15 @@ class ListViewController: UIViewController {
         
         image.image = UIImage(named: "dummy")
         
-        settingButton.setTitle("설정하기", for: .normal)
-        settingButton.setTitleColor(.white, for: .normal)
-        settingButton.titleLabel?.font = .boldSystemFont(ofSize: 15)
-        settingButton.backgroundColor = UIColor(named: "buttonBlue")
-        settingButton.layer.cornerRadius = 5
+        settingButton.listButtonStyle(
+            title: "설정하기",
+            fontColor: .white,
+            backgroundColor: UIColor(named: "buttonBlue")!)
         
-        searchButton.setTitle("저장 가능한 콘텐츠 살펴보기", for: .normal)
-        searchButton.titleLabel?.font = .boldSystemFont(ofSize: 15)
-        searchButton.setTitleColor(.black, for: .normal)
-        searchButton.backgroundColor = .white
-        searchButton.layer.cornerRadius = 5
+        searchButton.listButtonStyle(
+            title: "저장 가능한 콘텐츠 살펴보기",
+            fontColor: .black,
+            backgroundColor: .white)
         
     }
 

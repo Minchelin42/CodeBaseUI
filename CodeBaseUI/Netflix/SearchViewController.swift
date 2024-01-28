@@ -111,58 +111,24 @@ class SearchViewController: UIViewController {
         
         buttonView.backgroundColor = .black
         
-        var config = UIButton.Configuration.filled()
-        var titleAttr = AttributedString.init("공개 예정")
-            titleAttr.font = .systemFont(ofSize: 12.5, weight: .medium)
-            config.attributedTitle = titleAttr
-        config.titleAlignment = .center
+        firstButton.configuration = UIButton.Configuration.searchButtonStyle(
+            title: "공개 예정",
+            image: "blue",
+            backgroundColor: .white,
+            fontColor: .black)
         
-        config.image = UIImage(named:"blue")
-        config.imagePlacement = .leading
-        config.imagePadding = 8
-        config.cornerStyle = .capsule
+        secondButton.configuration = UIButton.Configuration.searchButtonStyle(
+            title: "모두의 인기 콘텐츠",
+            image: "turquoise",
+            backgroundColor: .black,
+            fontColor: .white)
         
-        config.baseBackgroundColor = .white
-        config.baseForegroundColor = .black
-        
-        firstButton.configuration = config
-        
-        var config2 = UIButton.Configuration.filled()
-        
-        var titleAttr2 = AttributedString.init("모두의 인기 콘텐츠")
-            titleAttr2.font = .systemFont(ofSize: 12.5, weight: .medium)
-            config2.attributedTitle = titleAttr2
-        
-        config2.titleAlignment = .center
-        
-        config2.image = UIImage(named:"turquoise")
-        config2.imagePlacement = .leading
-        config2.imagePadding = 8
-        config2.cornerStyle = .capsule
-        
-        config2.baseBackgroundColor = .black
-        config2.baseForegroundColor = .white
-        
-        secondButton.configuration = config2
-        
-        var config3 = UIButton.Configuration.filled()
-        
-        var titleAttr3 = AttributedString.init("TOP 10시리즈")
-            titleAttr3.font = .systemFont(ofSize: 12.5, weight: .medium)
-            config3.attributedTitle = titleAttr3
-        
-        config3.titleAlignment = .center
-        
-        config3.image = UIImage(named:"pink")
-        config3.imagePlacement = .leading
-        config3.imagePadding = 8
-        config3.cornerStyle = .capsule
-        
-        config3.baseBackgroundColor = .black
-        config3.baseForegroundColor = .white
-        
-        thirdButton.configuration = config3
-        
+        thirdButton.configuration = UIButton.Configuration.searchButtonStyle(
+            title: "TOP10 시리즈",
+            image: "pink",
+            backgroundColor: .black,
+            fontColor: .white)
+
         resultView.backgroundColor = .black
         
         titleLabel.text = "이런! 찾으시는 작품이 없습니다."

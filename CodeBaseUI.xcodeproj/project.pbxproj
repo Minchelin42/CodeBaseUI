@@ -21,6 +21,10 @@
 		39D47BC12B665C010067840B /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D47BC02B665C010067840B /* TabBarViewController.swift */; };
 		39D47BC32B6668110067840B /* ShoppingSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D47BC22B6668110067840B /* ShoppingSearchViewController.swift */; };
 		39D47BC52B666C160067840B /* SearchListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D47BC42B666C160067840B /* SearchListTableViewCell.swift */; };
+		39D47BC82B66B1230067840B /* UIButton + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D47BC72B66B1230067840B /* UIButton + Extension.swift */; };
+		39D47BCA2B66B8530067840B /* UIImageView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D47BC92B66B8530067840B /* UIImageView + Extension.swift */; };
+		39D47BCC2B66B8C90067840B /* UILabel + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D47BCB2B66B8C90067840B /* UILabel + Extension.swift */; };
+		39D47BCE2B66BE690067840B /* UINavigationController + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D47BCD2B66BE690067840B /* UINavigationController + Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +42,10 @@
 		39D47BC02B665C010067840B /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		39D47BC22B6668110067840B /* ShoppingSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingSearchViewController.swift; sourceTree = "<group>"; };
 		39D47BC42B666C160067840B /* SearchListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchListTableViewCell.swift; sourceTree = "<group>"; };
+		39D47BC72B66B1230067840B /* UIButton + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton + Extension.swift"; sourceTree = "<group>"; };
+		39D47BC92B66B8530067840B /* UIImageView + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView + Extension.swift"; sourceTree = "<group>"; };
+		39D47BCB2B66B8C90067840B /* UILabel + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel + Extension.swift"; sourceTree = "<group>"; };
+		39D47BCD2B66BE690067840B /* UINavigationController + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController + Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +80,9 @@
 		39D47BA02B6586040067840B /* CodeBaseUI */ = {
 			isa = PBXGroup;
 			children = (
+				39D47BD02B66BFCE0067840B /* Shopping */,
+				39D47BCF2B66BFAF0067840B /* Netflix */,
+				39D47BC62B66B1110067840B /* Extension */,
 				39D47BA12B6586040067840B /* AppDelegate.swift */,
 				39D47BA32B6586040067840B /* SceneDelegate.swift */,
 				39D47BA52B6586040067840B /* ViewController.swift */,
@@ -79,14 +90,39 @@
 				39D47BAA2B6586060067840B /* Assets.xcassets */,
 				39D47BAC2B6586060067840B /* LaunchScreen.storyboard */,
 				39D47BAF2B6586060067840B /* Info.plist */,
+			);
+			path = CodeBaseUI;
+			sourceTree = "<group>";
+		};
+		39D47BC62B66B1110067840B /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				39D47BC72B66B1230067840B /* UIButton + Extension.swift */,
+				39D47BC92B66B8530067840B /* UIImageView + Extension.swift */,
+				39D47BCB2B66B8C90067840B /* UILabel + Extension.swift */,
+				39D47BCD2B66BE690067840B /* UINavigationController + Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		39D47BCF2B66BFAF0067840B /* Netflix */ = {
+			isa = PBXGroup;
+			children = (
 				39D47BB52B65864B0067840B /* HomeViewController.swift */,
 				39D47BBC2B659D5C0067840B /* SearchViewController.swift */,
 				39D47BBE2B65ADE00067840B /* ListViewController.swift */,
 				39D47BC02B665C010067840B /* TabBarViewController.swift */,
+			);
+			path = Netflix;
+			sourceTree = "<group>";
+		};
+		39D47BD02B66BFCE0067840B /* Shopping */ = {
+			isa = PBXGroup;
+			children = (
 				39D47BC22B6668110067840B /* ShoppingSearchViewController.swift */,
 				39D47BC42B666C160067840B /* SearchListTableViewCell.swift */,
 			);
-			path = CodeBaseUI;
+			path = Shopping;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -168,10 +204,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				39D47BBD2B659D5C0067840B /* SearchViewController.swift in Sources */,
+				39D47BCE2B66BE690067840B /* UINavigationController + Extension.swift in Sources */,
 				39D47BA62B6586040067840B /* ViewController.swift in Sources */,
+				39D47BCA2B66B8530067840B /* UIImageView + Extension.swift in Sources */,
 				39D47BC32B6668110067840B /* ShoppingSearchViewController.swift in Sources */,
 				39D47BBF2B65ADE00067840B /* ListViewController.swift in Sources */,
 				39D47BA22B6586040067840B /* AppDelegate.swift in Sources */,
+				39D47BCC2B66B8C90067840B /* UILabel + Extension.swift in Sources */,
+				39D47BC82B66B1230067840B /* UIButton + Extension.swift in Sources */,
 				39D47BC12B665C010067840B /* TabBarViewController.swift in Sources */,
 				39D47BC52B666C160067840B /* SearchListTableViewCell.swift in Sources */,
 				39D47BA42B6586040067840B /* SceneDelegate.swift in Sources */,
